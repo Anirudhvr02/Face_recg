@@ -32,7 +32,7 @@ with st.container():
      st.write("---")
      left_column,right_column = st.columns(2)
     
-    with left_column:
+     with left_column:
         st.header("Live Capture of Face Attendance")
         st.write("This section displays the comparison of captured image and original image of the employee.")
         # Display current time
@@ -48,7 +48,7 @@ with st.container():
         st.write(f"Employee name: {random_name}")
         print(random)
     
-    with right_column:
+     with right_column:
         # Add date picker
         selected_date = st.date_input("Select Date", datetime.today())
         # Button to view database for selected date
