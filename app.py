@@ -1,13 +1,13 @@
 import streamlit as st
-from streamlit_lottie import st_lottie
+# from streamlit_lottie import st_lottie
 import requests
 from datetime import datetime
 import pandas as pd
 import os
 import random
 
-lottie_face = "https://lottie.host/c8b44339-efbe-4b6c-9537-921efeec632c/T7GyFCnelQ.json"
-lottie_automated = "https://lottie.host/62608296-d173-4d4b-a736-ec5f5007a956/fQtmty0Wee.json"
+# lottie_face = "https://lottie.host/c8b44339-efbe-4b6c-9537-921efeec632c/T7GyFCnelQ.json"
+# lottie_automated = "https://lottie.host/62608296-d173-4d4b-a736-ec5f5007a956/fQtmty0Wee.json"
 
 st.set_page_config(page_title="Face Based Attendance System", layout="wide")
 
