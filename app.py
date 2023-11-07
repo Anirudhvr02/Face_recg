@@ -25,7 +25,7 @@ with st.container():
         st.subheader("Overview")
         st.write("The Face Recognition-Based Attendance System is an innovative solution designed to automate the attendance tracking process in various environments, such as educational institutions, corporate offices, and events. Leveraging advanced facial recognition technology, this system eliminates the need for manual attendance management, providing a seamless and accurate alternative.")
     with r:
-        st_lottie(lottie_automated, height=200, key="automated")
+        # st_lottie(lottie_automated, height=200, key="automated")
         
 #---------------------Live attendance display-----------#
 with st.container():
@@ -75,7 +75,7 @@ with st.container():
         designation = st.text_input("Designation:")
         
     with right_column:
-        st_lottie(lottie_face, height=200, key="face")
+        # st_lottie(lottie_face, height=200, key="face")
         uploaded_file = st.file_uploader("Upload a picture of the user",type=["jpg", "png", "jpeg"])
 
 # Process uploaded file if any
