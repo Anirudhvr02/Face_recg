@@ -36,7 +36,8 @@ with st.container():
         st.header("Live Capture of Face Attendance")
         st.write("This section displays the comparison of captured image and original image of the employee.")
         # Display current time         
-        current_time = datetime.now(tzinfo=pytz.timezone("Asia/Kolkata")).strftime("%Y-%m-%d %H:%M:%S")
+        local_tz = pytz.timezone("Asia/Kolkata")
+        current_time = datetime.now(tz=local_tz).strftime("%Y-%m-%d %H:%M:%S")
         st.write(f"Current Time: {current_time}")
         # List of names
         names = ["Anirudh", "Venkatesh", "Vinayak", "Gadha", "Sandeep"]
