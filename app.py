@@ -55,7 +55,7 @@ with st.container():
         # Button to view database for selected date
         if st.button("View Database"):
             # Construct the file name based on the selected date
-            file_name = f'./attendance_records/{selected_date.strftime("%Y-%m-%d")}.csv'
+            file_name = f'attendance_records/{selected_date.strftime("%Y-%m-%d")}.csv'
             # Check if the file exists
             if os.path.isfile(file_name):
                 # Read the CSV file and store it in a DataFrame
