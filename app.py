@@ -28,40 +28,40 @@ with st.container():
         # st_lottie(lottie_automated, height=200, key="automated")
         
 #---------------------Live attendance display-----------#
-# with st.container():
-    # st.write("---")
-    # left_column,right_column = st.columns(2)
+with st.container():
+     st.write("---")
+     left_column,right_column = st.columns(2)
     
-with left_column:
-    st.header("Live Capture of Face Attendance")
-    st.write("This section displays the comparison of captured image and original image of the employee.")
-    # Display current time
-    current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
-    st.write(f"Current Time: {current_time}")
-    # List of names
-    names = ["Anirudh", "Venkatesh", "Vinayak", "Gadha", "Sandeep"]
-    # Generate a random index
-    random_index = random.randint(0, len(names)-1)
-    # Get the random name
-    random_name = names[random_index]
-    # Display the random name
-    st.write(f"Employee name: {random_name}")
-    print(random)
-
-with right_column:
-    # Add date picker
-    selected_date = st.date_input("Select Date", datetime.today())
-    # Button to view database for selected date
-    if st.button("View Database"):
-        # Construct the file name based on the selected date
-        file_name = f'./attendance_records/{selected_date.strftime("%Y-%m-%d")}.csv'
-        # Check if the file exists
-        if os.path.isfile(file_name):
-            # Read the CSV file and store it in a DataFrame
-            df = pd.read_csv(file_name)  
-            st.write(df)  # Visualize the dataframe in the Streamlit app
-        else:
-            st.write("No records found for the selected date.")
+    with left_column:
+        st.header("Live Capture of Face Attendance")
+        st.write("This section displays the comparison of captured image and original image of the employee.")
+        # Display current time
+        current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        st.write(f"Current Time: {current_time}")
+        # List of names
+        names = ["Anirudh", "Venkatesh", "Vinayak", "Gadha", "Sandeep"]
+        # Generate a random index
+        random_index = random.randint(0, len(names)-1)
+        # Get the random name
+        random_name = names[random_index]
+        # Display the random name
+        st.write(f"Employee name: {random_name}")
+        print(random)
+    
+    with right_column:
+        # Add date picker
+        selected_date = st.date_input("Select Date", datetime.today())
+        # Button to view database for selected date
+        if st.button("View Database"):
+            # Construct the file name based on the selected date
+            file_name = f'./attendance_records/{selected_date.strftime("%Y-%m-%d")}.csv'
+            # Check if the file exists
+            if os.path.isfile(file_name):
+                # Read the CSV file and store it in a DataFrame
+                df = pd.read_csv(file_name)  
+                st.write(df)  # Visualize the dataframe in the Streamlit app
+            else:
+                st.write("No records found for the selected date.")
 
 #---------------------to add New_user-------------------#
 with st.container():
