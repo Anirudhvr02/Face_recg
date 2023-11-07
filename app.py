@@ -28,9 +28,9 @@ with st.container():
         # st_lottie(lottie_automated, height=200, key="automated")
         
 #---------------------Live attendance display-----------#
-with st.container():
-    st.write("---")
-    left_column,right_column = st.columns(2)
+# with st.container():
+    # st.write("---")
+    # left_column,right_column = st.columns(2)
     
     with left_column:
         st.header("Live Capture of Face Attendance")
