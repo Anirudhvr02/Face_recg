@@ -5,7 +5,7 @@ from datetime import datetime
 import pandas as pd
 import os
 import random
-
+import pytz
 # lottie_face = "https://lottie.host/c8b44339-efbe-4b6c-9537-921efeec632c/T7GyFCnelQ.json"
 # lottie_automated = "https://lottie.host/62608296-d173-4d4b-a736-ec5f5007a956/fQtmty0Wee.json"
 
@@ -35,8 +35,8 @@ with st.container():
      with left_column:
         st.header("Live Capture of Face Attendance")
         st.write("This section displays the comparison of captured image and original image of the employee.")
-        # Display current time
-        current_time = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+        # Display current time         
+        current_time = datetime.now(tzinfo=pytz.timezone("IST")).strftime("%Y-%m-%d %H:%M:%S")
         st.write(f"Current Time: {current_time}")
         # List of names
         names = ["Anirudh", "Venkatesh", "Vinayak", "Gadha", "Sandeep"]
